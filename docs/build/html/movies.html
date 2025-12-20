@@ -6,19 +6,21 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>movies.models module &mdash; Movies Project 0.0.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+  <title>movies package &mdash; Movies Project 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
-      <script src="../../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=f6245a2f"></script>
-      <script src="../../_static/doctools.js?v=888ff710"></script>
-      <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
-    <script src="../../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=f6245a2f"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="users package" href="users.html" />
+    <link rel="prev" title="Usage" href="usage.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -29,11 +31,11 @@
 
           
           
-          <a href="../../index.html" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
             Movies Project
           </a>
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -41,10 +43,47 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">movies package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-movies">Package contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#movies.models.Movie"><code class="docutils literal notranslate"><span class="pre">Movie</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.title"><code class="docutils literal notranslate"><span class="pre">Movie.title</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.description"><code class="docutils literal notranslate"><span class="pre">Movie.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.release_date"><code class="docutils literal notranslate"><span class="pre">Movie.release_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.genre"><code class="docutils literal notranslate"><span class="pre">Movie.genre</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.rating"><code class="docutils literal notranslate"><span class="pre">Movie.rating</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.cast"><code class="docutils literal notranslate"><span class="pre">Movie.cast</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.director"><code class="docutils literal notranslate"><span class="pre">Movie.director</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Movie.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Movie.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">Movie.cast</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">Movie.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2"><code class="docutils literal notranslate"><span class="pre">Movie.director</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3"><code class="docutils literal notranslate"><span class="pre">Movie.genre</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.get_next_by_release_date"><code class="docutils literal notranslate"><span class="pre">Movie.get_next_by_release_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.get_previous_by_release_date"><code class="docutils literal notranslate"><span class="pre">Movie.get_previous_by_release_date()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.id"><code class="docutils literal notranslate"><span class="pre">Movie.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#movies.models.Movie.objects"><code class="docutils literal notranslate"><span class="pre">Movie.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4"><code class="docutils literal notranslate"><span class="pre">Movie.rating</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5"><code class="docutils literal notranslate"><span class="pre">Movie.release_date</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6"><code class="docutils literal notranslate"><span class="pre">Movie.title</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#movies.serializer.MovieSerializer"><code class="docutils literal notranslate"><span class="pre">MovieSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#movies.serializer.MovieSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">MovieSerializer.Meta</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">users package</a></li>
 </ul>
 
         </div>
@@ -53,17 +92,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Movies Project</a>
+          <a href="index.html">Movies Project</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">movies.models module</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">movies package</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/api/movies/movies.models.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/movies.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -71,11 +110,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-movies.models">
-<span id="movies-models-module"></span><h1>movies.models module<a class="headerlink" href="#module-movies.models" title="Permalink to this heading"></a></h1>
-<dl class="py class">
+  <section id="movies-package">
+<h1>movies package<a class="headerlink" href="#movies-package" title="Permalink to this heading"></a></h1>
+<section id="module-movies">
+<span id="package-contents"></span><h2>Package contents<a class="headerlink" href="#module-movies" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-movies.models"></span><dl class="py class">
 <dt class="sig sig-object py" id="movies.models.Movie">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">movies.models.</span></span><span class="sig-name descname"><span class="pre">Movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/movies/models.html#Movie"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#movies.models.Movie" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">movies.models.</span></span><span class="sig-name descname"><span class="pre">Movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/movies/models.html#Movie"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#movies.models.Movie" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
 <p>Model representing a movie in the system.</p>
 <dl class="py attribute">
@@ -240,12 +281,46 @@ object the first time, the query is executed.</p>
 
 </dd></dl>
 
+<span class="target" id="module-movies.serializer"></span><dl class="py class">
+<dt class="sig sig-object py" id="movies.serializer.MovieSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">movies.serializer.</span></span><span class="sig-name descname"><span class="pre">MovieSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/movies/serializer.html#MovieSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#movies.serializer.MovieSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelSerializer</span></code></p>
+<p>Serializer for the Movie model.
+Validates that the rating is between 0.0 and 5.0. and serializes all fields.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="movies.serializer.MovieSerializer.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/movies/serializer.html#MovieSerializer.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#movies.serializer.MovieSerializer.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="movies.serializer.MovieSerializer.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__all__'</span></em><a class="headerlink" href="#movies.serializer.MovieSerializer.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="movies.serializer.MovieSerializer.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#movies.serializer.MovieSerializer.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#movies.models.Movie" title="movies.models.Movie"><code class="xref py py-class docutils literal notranslate"><span class="pre">Movie</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+</div>
+</section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="usage.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="users.html" class="btn btn-neutral float-right" title="users package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

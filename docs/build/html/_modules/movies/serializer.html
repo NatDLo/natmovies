@@ -44,6 +44,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movies.html">movies package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../users.html">users package</a></li>
 </ul>
 
         </div>
@@ -74,14 +76,14 @@
 <span></span><span class="kn">from</span><span class="w"> </span><span class="nn">rest_framework</span><span class="w"> </span><span class="kn">import</span> <span class="n">serializers</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Movie</span>
 
-<div class="viewcode-block" id="MovieSerializer"><a class="viewcode-back" href="../../api/movies/movies.serializer.html#movies.serializer.MovieSerializer">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MovieSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<div class="viewcode-block" id="MovieSerializer"><a class="viewcode-back" href="../../movies.html#movies.serializer.MovieSerializer">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">MovieSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Serializer for the Movie model.</span>
 <span class="sd">    Validates that the rating is between 0.0 and 5.0. and serializes all fields.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">rating</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">FloatField</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mf">5.0</span><span class="p">)</span>
 
-<div class="viewcode-block" id="MovieSerializer.Meta"><a class="viewcode-back" href="../../api/movies/movies.serializer.html#movies.serializer.MovieSerializer.Meta">[docs]</a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+<div class="viewcode-block" id="MovieSerializer.Meta"><a class="viewcode-back" href="../../movies.html#movies.serializer.MovieSerializer.Meta">[docs]</a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">Movie</span>
         <span class="n">fields</span> <span class="o">=</span> <span class="s2">&quot;__all__&quot;</span></div></div>
 </pre></div>

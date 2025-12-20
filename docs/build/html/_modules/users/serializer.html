@@ -44,6 +44,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movies.html">movies package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../users.html">users package</a></li>
 </ul>
 
         </div>
@@ -77,7 +79,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">django.utils.translation</span><span class="w"> </span><span class="kn">import</span> <span class="n">gettext_lazy</span> <span class="k">as</span> <span class="n">_</span>
 
-<div class="viewcode-block" id="UserRegisterSerializer"><a class="viewcode-back" href="../../api/users/users.serializer.html#users.serializer.UserRegisterSerializer">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">UserRegisterSerializer</span><span class="p">(</span><span class="n">ModelSerializer</span><span class="p">):</span>
+<div class="viewcode-block" id="UserRegisterSerializer"><a class="viewcode-back" href="../../users.html#users.serializer.UserRegisterSerializer">[docs]</a><span class="k">class</span><span class="w"> </span><span class="nc">UserRegisterSerializer</span><span class="p">(</span><span class="n">ModelSerializer</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Serializer for registering a new user.</span>
 <span class="sd">    Handles user creation with password hashing and email validation.</span>
@@ -86,7 +88,7 @@
     <span class="n">email</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span><span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">password</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">write_only</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
 
-<div class="viewcode-block" id="UserRegisterSerializer.Meta"><a class="viewcode-back" href="../../api/users/users.serializer.html#users.serializer.UserRegisterSerializer.Meta">[docs]</a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>  <span class="c1"># Meta information for the serializer</span>
+<div class="viewcode-block" id="UserRegisterSerializer.Meta"><a class="viewcode-back" href="../../users.html#users.serializer.UserRegisterSerializer.Meta">[docs]</a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>  <span class="c1"># Meta information for the serializer</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">User</span>
         <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span>
             <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">,</span> <span class="s1">&#39;first_name&#39;</span><span class="p">,</span> <span class="s1">&#39;last_name&#39;</span><span class="p">,</span> <span class="s1">&#39;password&#39;</span>
@@ -96,7 +98,7 @@
             <span class="s2">&quot;date_joined&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;read_only&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>  <span class="c1"># Read-only</span>
         <span class="p">}</span></div>
 
-<div class="viewcode-block" id="UserRegisterSerializer.validate_email"><a class="viewcode-back" href="../../api/users/users.serializer.html#users.serializer.UserRegisterSerializer.validate_email">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">validate_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<div class="viewcode-block" id="UserRegisterSerializer.validate_email"><a class="viewcode-back" href="../../users.html#users.serializer.UserRegisterSerializer.validate_email">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">validate_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Validates that the email is not already registered</span>
 <span class="sd">        arguments:</span>
@@ -108,7 +110,7 @@
             <span class="k">raise</span> <span class="n">serializers</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Este email ya está registrado.&quot;</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">value</span></div>
 
-<div class="viewcode-block" id="UserRegisterSerializer.create"><a class="viewcode-back" href="../../api/users/users.serializer.html#users.serializer.UserRegisterSerializer.create">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
+<div class="viewcode-block" id="UserRegisterSerializer.create"><a class="viewcode-back" href="../../users.html#users.serializer.UserRegisterSerializer.create">[docs]</a>    <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">validated_data</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Creates a new user with the hashed password</span>
 

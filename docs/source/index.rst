@@ -13,12 +13,12 @@ filter them by rating and genre, and add or remove movies.
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-   api/movies
-   api/users
+   
    introduction
    installation
    usage
+   movies
+   users
 
 Indices and tables
 ==================
@@ -26,14 +26,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-
-.. autoclass:: movies.models.Movie
-   :members:
-   :exclude-members:
-       DoesNotExist,
-       MultipleObjectsReturned,
-       objects,
-       get_next_by_release_date,
-       get_previous_by_release_date
-

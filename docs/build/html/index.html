@@ -46,6 +46,8 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movies.html">movies package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">users package</a></li>
 </ul>
 
         </div>
@@ -82,6 +84,16 @@ filter them by rating and genre, and add or remove movies.</p>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="movies.html">movies package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="movies.html#module-movies">Package contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="movies.html#submodules">Submodules</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="users.html">users package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="users.html#module-users">Package contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="users.html#submodules">Submodules</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
@@ -92,146 +104,6 @@ filter them by rating and genre, and add or remove movies.</p>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
-<dl class="py class">
-<dt class="sig sig-object py" id="movies.models.Movie">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">movies.models.</span></span><span class="sig-name descname"><span class="pre">Movie</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/movies/models.html#Movie"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#movies.models.Movie" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
-<p>Model representing a movie in the system.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="movies.models.Movie.title">
-<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#movies.models.Movie.title" title="Permalink to this definition"></a></dt>
-<dd><p>The title of the movie.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="movies.models.Movie.description">
-<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#movies.models.Movie.description" title="Permalink to this definition"></a></dt>
-<dd><p>A brief description of the movie.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="movies.models.Movie.release_date">
-<span class="sig-name descname"><span class="pre">release_date</span></span><a class="headerlink" href="#movies.models.Movie.release_date" title="Permalink to this definition"></a></dt>
-<dd><p>The release date of the movie.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>date</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="movies.models.Movie.genre">
-<span class="sig-name descname"><span class="pre">genre</span></span><a class="headerlink" href="#movies.models.Movie.genre" title="Permalink to this definition"></a></dt>
-<dd><p>The genre of the movie.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="movies.models.Movie.rating">
-<span class="sig-name descname"><span class="pre">rating</span></span><a class="headerlink" href="#movies.models.Movie.rating" title="Permalink to this definition"></a></dt>
-<dd><p>The movie’s rating between 0.0 and 5.0.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="movies.models.Movie.cast">
-<span class="sig-name descname"><span class="pre">cast</span></span><a class="headerlink" href="#movies.models.Movie.cast" title="Permalink to this definition"></a></dt>
-<dd><p>A list of actors in the movie.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)">list</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="movies.models.Movie.director">
-<span class="sig-name descname"><span class="pre">director</span></span><a class="headerlink" href="#movies.models.Movie.director" title="Permalink to this definition"></a></dt>
-<dd><p>The director of the movie.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id0">
-<span class="sig-name descname"><span class="pre">cast</span></span><a class="headerlink" href="#id0" title="Permalink to this definition"></a></dt>
-<dd><p>A wrapper for a deferred-loading field. When the value is read from this
-object the first time, the query is executed.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id1">
-<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#id1" title="Permalink to this definition"></a></dt>
-<dd><p>A wrapper for a deferred-loading field. When the value is read from this
-object the first time, the query is executed.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id2">
-<span class="sig-name descname"><span class="pre">director</span></span><a class="headerlink" href="#id2" title="Permalink to this definition"></a></dt>
-<dd><p>A wrapper for a deferred-loading field. When the value is read from this
-object the first time, the query is executed.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id3">
-<span class="sig-name descname"><span class="pre">genre</span></span><a class="headerlink" href="#id3" title="Permalink to this definition"></a></dt>
-<dd><p>A wrapper for a deferred-loading field. When the value is read from this
-object the first time, the query is executed.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="movies.models.Movie.id">
-<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#movies.models.Movie.id" title="Permalink to this definition"></a></dt>
-<dd><p>A wrapper for a deferred-loading field. When the value is read from this
-object the first time, the query is executed.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id4">
-<span class="sig-name descname"><span class="pre">rating</span></span><a class="headerlink" href="#id4" title="Permalink to this definition"></a></dt>
-<dd><p>A wrapper for a deferred-loading field. When the value is read from this
-object the first time, the query is executed.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id5">
-<span class="sig-name descname"><span class="pre">release_date</span></span><a class="headerlink" href="#id5" title="Permalink to this definition"></a></dt>
-<dd><p>A wrapper for a deferred-loading field. When the value is read from this
-object the first time, the query is executed.</p>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="id6">
-<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#id6" title="Permalink to this definition"></a></dt>
-<dd><p>A wrapper for a deferred-loading field. When the value is read from this
-object the first time, the query is executed.</p>
-</dd></dl>
-
-</dd></dl>
-
 </section>
 
 
