@@ -1,0 +1,39 @@
+<div class="movies-form-container">
+    <form [formGroup]="movieForm" (ngSubmit)="saveMovie()">
+        <div class="movie-form-group">
+            <label for="title">Title</label>
+            <input id="title" formControlName="title" />
+        </div>
+        <div class="movie-form-group">
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="description"></textarea>
+        </div>
+        <div class="movie-form-group">
+            <label for="director">Director</label>
+            <input id="director" formControlName="director" />
+        </div>
+        <div class="movie-form-group">
+            <label for="release_date">Release Date</label>
+            <input id="release_date" formControlName="release_date" type="date" />
+        </div>
+        <div class="movie-form-group">
+            <label for="genre">Genre</label>
+            <select id="genre" formControlName="genre">
+                <option value="" disabled selected>Select a genre</option>
+                <option *ngFor="let g of genres" [value]="g">{{ g }}</option>
+            </select>
+        </div>
+        <div class="movie-form-group">
+            <label for="rating">Rating</label>
+            <input id="rating" formControlName="rating" type="number" min="0" max="5" step="0.5" />
+        </div>
+        <div class="movie-form-group">
+            <label for="cast">Cast</label>
+            <input id="cast" formControlName="cast" />
+        </div>
+        <div class="movie-actions">
+            <button type="submit" class="btn-save" [disabled]="movieForm.invalid">Save</button>
+            <button type="button" class="btn-cancel" (click)="navigateToMovies()">Cancel</button>
+        </div>
+    </form>
+</div>

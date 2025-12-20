@@ -1,0 +1,43 @@
+<div class="user-container">
+  <form [formGroup]="userForm" (ngSubmit)="updateUser()">
+    <div class="user-form-group">
+      <label for="username">Username</label>
+      <input id="username" formControlName="username" />
+      <small class="err" *ngIf="userForm.get('username')?.touched && userForm.get('username')?.invalid">
+        Username is required (min 3).
+      </small>
+    </div>
+
+    <div class="user-form-group" *ngIf="!editMode">
+      <label for="password">Password</label>
+      <input id="password" formControlName="password" type="password" />
+      <small class="err" *ngIf="userForm.get('password')?.touched && userForm.get('password')?.invalid">
+        Password is required (min 6).
+      </small>
+    </div>
+
+    <div class="user-form-group">
+      <label for="email">Email</label>
+      <input id="email" formControlName="email" />
+      <small class="err" *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+        Enter a valid email.
+      </small>
+    </div>
+
+    <div class="user-form-group">
+      <label for="first_name">First Name</label>
+      <input id="first_name" formControlName="first_name" />
+    </div>
+
+    <div class="user-form-group">
+      <label for="last_name">Last Name</label>
+      <input id="last_name" formControlName="last_name" />
+    </div>
+
+    <div class="user-actions" style="display:flex; gap:12px;">
+      <button type="submit" class="btn-save" [disabled]="userForm.invalid">Save</button>
+      <button type="button" class="btn-delete" *ngIf="editMode" (click)="deleteUser()">Delete</button>
+      <button type="button" class="btn-cancel" (click)="navigateToMovies()">Cancel</button>
+    </div>
+  </form>
+</div>

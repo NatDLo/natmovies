@@ -1,0 +1,79 @@
+<div class="movies-container">
+    <h2>Movies</h2>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <button class="btn btn-primary" (click)="createMovie()">Add Movie</button>
+    </div>
+  
+    <!-- Movie Count -->
+    <p class="movie-count" *ngIf="!loading">
+        {{ getTotalMoviesFiltrados() }} movie{{ getTotalMoviesFiltrados() === 1 ? '' : 's' }} found.
+    </p>
+
+    <!-- Filters -->
+    <div class="filters">
+        <select [(ngModel)]="filters.genre" (ngModelChange)="applyFilters()">
+            <option value="">All Genres</option>
+            <option *ngFor="let genre of genres" [value]="genre">{{ genre }}</option>
+        </select>
+
+        <select [(ngModel)]="filters.rating" (ngModelChange)="applyFilters()">
+            <option [ngValue]="null">All Ratings</option>
+            <option *ngFor="let rating of ratings" [ngValue]="rating">{{ rating }}</option>
+        </select>
+    </div>
+
+    <!-- Loading -->
+    <div *ngIf="loading" class="loading">Loading movies...</div>
+
+    <!-- Movie List -->
+    <ul class="movies-list" *ngIf="!loading">
+        <li *ngFor="let movie of movies" class="movie-item">
+            <div class="movie-header">
+                <span class="movie-title">{{ movie.title }}</span>
+                <span class="movie-release-date">({{ movie.release_date | date:'yyyy' }})</span>
+                <span class="movie-rating">{{ movie.rating }}</span>
+                <button class="btn-detail" (click)="viewMovieDetails(movie)">Details</button>
+            </div>
+        </li>
+    </ul>
+
+    <!-- No Movies Found -->
+    <div *ngIf="!loading && movies.length === 0" class="no-movies">
+        No movies found.
+    </div>
+
+    <!-- Movie Detail Modal -->
+    <div class="modal-overlay" *ngIf="selectedMovie" (click)="closeMovieDetails()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+            <div class="modal-header">
+                <h3>{{ selectedMovie.title }}</h3>
+                <button class="btn-close" (click)="closeMovieDetails()">X</button>
+            </div>
+        <div class="modal-body">
+            <p><strong>Description:</strong> {{ selectedMovie.description }}</p>
+            <p><strong>Director:</strong> {{ selectedMovie.director }}</p>
+            <p><strong>Release Date:</strong> {{ selectedMovie.release_date | date }}</p>
+            <p><strong>Genre:</strong> {{ selectedMovie.genre }}</p>
+            <p><strong>Rating:</strong> {{ selectedMovie.rating }}</p>
+            <p><strong>Cast:</strong> {{ selectedCast }}</p>
+        </div>
+        <button class="edit-detail" (click)="updateMovie(selectedMovie!)">Edit</button>
+        <button class="delete-detail" (click)="deleteMovie(selectedMovie!)">Delete</button>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" *ngIf="totalMovies > 0">
+        <button
+            (click)="previousPage && (currentPage = currentPage - 1) && loadMovies()"
+            [disabled]="!previousPage">
+            Previous
+        </button>
+        <button
+            (click)="nextPage && (currentPage = currentPage + 1) && loadMovies()"
+            [disabled]="!nextPage">
+            Next
+        </button>
+    </div>

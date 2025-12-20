@@ -1,0 +1,14 @@
+<header class="app-header">
+  <ng-container *ngIf="isAuthenticated">
+    <button class="chip" (click)="goToProfile()" title="Edit profile">
+      <span class="name">
+        {{ (currentUser$ | async)?.first_name || (currentUser$ | async)?.username || 'User' }}
+      </span>
+    </button>
+    <button class="btn btn-danger" (click)="logout()">Logout</button>
+  </ng-container>
+</header>
+
+<main class="page">
+  <router-outlet></router-outlet>
+</main>

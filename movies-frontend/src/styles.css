@@ -1,0 +1,154 @@
+:root{
+  --bg:#f6f8fc;
+  --surface:#ffffff;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --primary:#2563eb;
+  --primary-600:#1d4ed8;
+  --accent:#f59e0b;
+  --danger:#ef4444;
+  --danger-600:#dc2626;
+  --radius:12px;
+  --shadow:0 10px 30px rgba(16,24,40,.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:linear-gradient(180deg,#f9fbff 0%, #f2f5fc 100%);
+  padding-bottom: 24px;
+}
+
+/* Centered layout */
+.page,
+.movies-container,
+.movies-form-container,
+.auth-container,
+.user-container,
+.login-container{
+  max-width:980px;
+  margin:24px auto;
+  padding:0 16px;
+}
+
+/* Header: user + logout to the left */
+.app-header{
+  position:sticky; top:0; z-index:100;
+  display:flex; align-items:center; gap:12px;
+  justify-content:flex-start;             /* ← left */
+  padding:10px 16px;
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 2px 10px rgba(0,0,0,.03);
+}
+
+/* User chip */
+.chip{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:8px 12px; border:1px solid var(--border);
+  background:var(--surface); border-radius:999px; cursor:pointer;
+  box-shadow:var(--shadow);
+}
+.name{font-weight:600}
+
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 14px; border-radius:10px;
+  border:1px solid var(--border);
+  background:var(--surface); color:var(--text);
+  cursor:pointer; text-decoration:none; transition:all .15s ease;
+  box-shadow:var(--shadow);
+}
+.btn:hover{transform:translateY(-1px); background:#f8fafc}
+.btn-primary{background:var(--primary); border-color:var(--primary); color:#fff}
+.btn-primary:hover{background:var(--primary-600)}
+.btn-danger{background:var(--danger); border-color:var(--danger); color:#fff}
+.btn-danger:hover{background:var(--danger-600)}
+.btn-close{background:transparent; border:none; color:var(--muted); font-size:20px; cursor:pointer}
+
+/* Inputs and forms */
+label{color:var(--muted); font-size:13px; display:block; margin-bottom:6px}
+input, textarea, select{
+  width:100%; padding:12px 14px; background:#fff;
+  border:1px solid var(--border); border-radius:10px; outline:none;
+}
+input:focus, textarea:focus, select:focus{
+  border-color:var(--primary);
+  box-shadow:0 0 0 4px rgba(37,99,235,.15)
+}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.movie-form-group, .user-form-group, .form-group{margin-bottom:14px}
+.err{color:#b91c1c; font-size:12px}
+
+/* Login card */
+.login-card{
+  margin:0 auto; max-width:520px; padding:24px;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:16px; box-shadow:var(--shadow);
+}
+.login-header{margin-bottom:12px}
+.login-form button{margin-top:8px}
+
+/* Lists and cards */
+.movies-list{list-style:none; padding:0; margin:16px 0}
+.movie-item{
+  padding:14px; border:1px solid var(--border); border-radius:var(--radius);
+  background:var(--card); margin-bottom:10px; box-shadow:var(--shadow)
+}
+.movie-header{display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+.movie-title{font-weight:700}
+.movie-release-date{color:var(--muted)}
+.movie-rating{color:var(--accent); font-weight:700}
+
+/* Toolbar and filters */
+.toolbar{display:flex; gap:12px; flex-wrap:wrap; margin:8px 0 16px}
+.filters{display:flex; gap:12px; flex-wrap:wrap}
+
+/* Actions form */
+.movie-actions, .user-actions{display:flex; gap:12px; margin-top:12px}
+.btn-save{
+  background:var(--primary);
+  border-color:var(--primary);
+  color:#fff;
+}
+.btn-save:hover{ background:var(--primary-600) }
+
+.btn-delete{
+  background:var(--danger);
+  border-color:var(--danger);
+  color:#fff;
+}
+.btn-delete:hover{ background:var(--danger-600) }
+
+.btn-cancel{
+  background:var(--surface);
+  border-color:var(--border);
+  color:var(--text);
+}
+
+/* Pagination */
+.pagination{display:flex; gap:10px; margin:18px 0 28px}
+
+/* Modal */
+.modal-overlay{
+  position:fixed; inset:0; background:rgba(9,12,22,.35);
+  display:grid; place-items:center; z-index:1000;
+}
+.modal-content{
+  background:#fff; border:1px solid var(--border); border-radius:16px;
+  padding:18px; width:min(700px,92vw); box-shadow:var(--shadow)
+}
+.modal-header{display:flex; justify-content:space-between; align-items:center; margin-bottom:8px}
+.modal-actions{display:flex; gap:10px; margin-top:14px}
+
+/* Utilities */
+.loading,.no-movies{color:var(--muted); padding:8px 0}
+.auth-alt{margin-top:12px; display:flex; gap:8px; align-items:center}
+.auth-alt .link{color:var(--primary); text-decoration:none}
+.auth-alt .link:hover{text-decoration:underline}
