@@ -1,4 +1,4 @@
-movies package
+Movies
 ==============
 
 Package contents
