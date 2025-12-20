@@ -3,15 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Movies Project's documentation!
+Welcome to NatMovies's documentation!
 ==========================================
+
+NatMovies is an application that allows users to log in, view available movies, 
+filter them by rating and genre, and add or remove movies.
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   api/movies/modules
-   api/users/modules
+   api/movies
+   api/users
+   introduction
+   installation
+   usage
 
 Indices and tables
 ==================
