@@ -11,14 +11,14 @@ Documentation: https://natmovies.readthedocs.io/en/latest/index.html
 - Unit tests for backend API
 
 ## Architecture
-- Backend (Django/DRF): [backend](technical_interviews/movies_project/backend)
-  - Settings: [backend/backend/settings.py](technical_interviews/movies_project/backend/backend/settings.py)
-  - URLs: [backend/movies/urls.py](technical_interviews/movies_project/backend/movies/urls.py)
-  - Model: [`movies.models.Movie`](technical_interviews/movies_project/backend/movies/models.py)
-  - Seed command: [`movies.management.commands.seed_data.Command`](technical_interviews/movies_project/backend/movies/management/commands/seed_data.py)
-  - Tests: [backend/movies/tests.py](technical_interviews/movies_project/backend/movies/tests.py)
-- Frontend (Angular): [movies-frontend](technical_interviews/movies_project/movies-frontend)
-  - Movies component: [`app.components.movies.Movies`](technical_interviews/movies_project/movies-frontend/src/app/components/movies/movies.ts)
+- Backend (Django/DRF): [backend](https://github.com/NatDLo/natmovies/backend)
+  - Settings: [backend/backend/settings.py]((https://github.com/NatDLo/natmovies/backend/backend/settings.py)
+  - URLs: [backend/movies/urls.py](https://github.com/NatDLo/natmovies/backend/movies/urls.py)
+  - Model: [`movies.models.Movie`](https://github.com/NatDLo/natmovies/backend/movies/models.py)
+  - Seed command: [`movies.management.commands.seed_data.Command`](https://github.com/NatDLo/natmovies/backend/movies/management/commands/seed_data.py)
+  - Tests: [backend/movies/tests.py](https://github.com/NatDLo/natmovies/backend/movies/tests.py)
+- Frontend (Angular): [movies-frontend](https://github.com/NatDLo/natmovies/movies-frontend)
+  - Movies component: [`app.components.movies.Movies`](https://github.com/NatDLo/natmovies/movies-frontend/src/app/components/movies/movies.ts)
 
 ## Requirements
 - Python 3.10+
@@ -103,7 +103,7 @@ ng test
 
 ## Docs
 - Online: https://natmovies.readthedocs.io/en/latest/index.html
-- Source: [docs/source/conf.py](technical_interviews/movies_project/docs/source/conf.py), build helpers: [docs/Makefile](technical_interviews/movies_project/docs/Makefile), [docs/make.bat](technical_interviews/movies_project/docs/make.bat), config: [.readthedocs.yaml](technical_interviews/movies_project/.readthedocs.yaml)
+- Source: [docs/source/conf.py]((https://github.com/NatDLo/natmovies/blob/main/docs/source/conf.py)), build helpers: [docs/Makefile]((https://github.com/NatDLo/natmovies/blob/main/docs/Makefile/), [docs/make.bat](https://github.com/NatDLo/natmovies/blob/main/docs/make.bat), config: [.readthedocs.yaml](https://github.com/NatDLo/natmovies/.readthedocs.yaml)
 - Build locally:
   ```sh
   cd docs
