@@ -103,7 +103,7 @@ ng test
 
 ## Docs
 - Online: https://natmovies.readthedocs.io/en/latest/index.html
-- Source: [docs/source/conf.py](/blob/main/docs/source/conf.py), build helpers: [docs/Makefile](/blob/main/docs/Makefile/), [docs/make.bat](/blob/main/docs/make.bat), config: [.readthedocs.yaml](/.readthedocs.yaml)
+- Source: [docs/source/conf.py](/docs/source/conf.py), build helpers: [docs/Makefile](/docs/Makefile/), [docs/make.bat](/docs/make.bat), config: [.readthedocs.yaml](/.readthedocs.yaml)
 - Build locally:
   ```sh
   cd docs
